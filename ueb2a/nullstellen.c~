@@ -1,0 +1,35 @@
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+
+double diskriminante(double a, double b, double c);
+
+int main(void) {
+    double a, b, c;
+    printf("Bitte Koeffizienten in der Reihenfolge a, b, c eingben.\n");
+    int check = scanf("%lf %lf %lf", &a, &b, &c);
+    double D;
+
+    if (check == 3) {
+        D = diskriminante(a, b, c);
+        if (D < 0) {
+            printf("Keine reellen Nullstellen\n");
+        } else if(D == 0) {
+            double x = (-b) / (2 * a); 
+            printf("Die Nullstelle ist %lf\n", x);
+        } else {
+            double x1 = ((-b) + sqrt(D)) / (2 * a);
+            double x2 = ((-b) - sqrt(D)) / (2 * a);
+            printf("Die Nullstellen sind %lf und %lf\n", x1, x2);
+        }
+        exit(EXIT_SUCCESS);
+    } else {
+        printf("Fehlerhafte Eingabe");
+        exit(EXIT_FAILURE);
+    }
+}
+
+double diskriminante(double a, double b, double c) {
+    double D = (b * b) - (4 * a * c);
+    return D;
+}
