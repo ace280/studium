@@ -1,10 +1,5 @@
 #include "intarray.h"
 
-struct IntArray {
-    int laenge;
-    int *intArray;
-};
-
 struct IntArray create(int laenge) {
     struct IntArray ia = {laenge, calloc(laenge, sizeof(int))};
     return ia;

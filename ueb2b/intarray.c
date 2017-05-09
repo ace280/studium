@@ -5,8 +5,8 @@ struct IntArray create(int laenge) {
     return ia;
 }
 
-void destroy(struct IntArray ia) {
-    free(ia.intArray);
+void destroy(struct IntArray *ia) {
+    free(ia->intArray);
 }
 
 //Bricht bei fehlerhaftem Zugriff ab

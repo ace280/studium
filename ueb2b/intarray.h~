@@ -7,7 +7,7 @@ struct IntArray;
 typedef struct IntArray {
     int laenge;
     int *intArray;
-};
+} _IntArray;
 
 struct IntArray create(int laenge);
 void destroy(struct IntArray ia);

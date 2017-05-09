@@ -10,7 +10,7 @@ typedef struct IntArray {
 } _IntArray;
 
 struct IntArray create(int laenge);
-void destroy(struct IntArray ia);
+void destroy(struct IntArray *ia);
 int read(struct IntArray ia, int index);
 void set(struct IntArray* ia, int index, int value);
 

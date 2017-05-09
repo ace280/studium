@@ -8,6 +8,6 @@ int main (void) {
     set(&ia, 100, 3);
     printf("Wert an Stelle 3: %d\n", read(ia, 3));
     //printf("Wert an Stelle 900: %d\n", read(ia, 900));
-    destroy(ia);
+    destroy(&ia);
     return EXIT_SUCCESS;
 }
